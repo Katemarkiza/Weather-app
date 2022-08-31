@@ -10,10 +10,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
-   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-   
     <title>Weather App</title>
   </head>
   <body>
@@ -41,7 +40,7 @@
             </div>
           </form>
           <div class="overview">
-            <h1 id="city"> Udine, Italy</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Last updated: <span id="date"></span></li>
               <li id="description"></li>
@@ -49,32 +48,35 @@
           </div>
           <div class="row">
             <div class="col-6">
-              <div class="d-flex weather-temperature">
-  <img src="" alt="Clear" id="icon" /><div>
-    <strong id="temperature"></strong
-    ><span class="units"> °C</span> 
-                  
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"
+                    ><a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a></span
+                  >
                 </div>
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> m/h</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>
         </div>
-  <small>
-    <a
-            href="https://github.com/Katemarkiza/weather-app"
+        <small>
+          <a
+            href="https://github.com/wecodeschool/vanilla-weather-app"
             target="_blank"
             >Open-source code</a
           >
-          by Kateryna Gavrylchyk
-  </small>
-  </div>
-  </div>
-  <script src="src/app.js"></script>
-</body>
+          by Matt Delac
+        </small>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
 </html>
