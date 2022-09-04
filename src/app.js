@@ -21,6 +21,7 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
@@ -117,3 +118,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Udine");
+displayForecast();
